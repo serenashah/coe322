@@ -1,10 +1,22 @@
 def new_lat(site_dict, lat_string, site_num):
+    """
+    Iterates through a list of dictionaries, pulling out values associated with
+    a given key for a number item of the list. Returns the string value.
+    """
     return(site_dict[site_num-1][lat_string])
 
 def new_lon(site_dict, lon_string, site_num):
+    """
+    Iterates through a list of dictionaries, pulling out values associated with
+    a given key for a number item of the list. Returns the string value.
+    """
     return(site_dict[site_num-1][lon_string])
 
 def calc_gcd(latitude_1: float, longitude_1: float, latitude_2: float, longitude_2: float) -> float:
+    """
+    Given two coordinates of latitude and longitude calculates the distance between them 
+    on the surface of a sphere using some formula.
+    """
     import math
     mars_radius = 3389.5    # km
     lat1, lon1, lat2, lon2 = map( math.radians, [latitude_1, longitude_1, latitude_2, longitude_2] )
@@ -12,6 +24,10 @@ def calc_gcd(latitude_1: float, longitude_1: float, latitude_2: float, longitude
     return ( mars_radius * d_sigma )
 
 def sample(site_dict, comp_string, site_num):
+    """
+    Iterates through a list of dictionaries, pulling out values associated with
+    a given key for a number item of the list. Returns the string value.
+    """
     if(site_dict[site_num-1][comp_string] == 'stony'):
         return(1)
     if(site_dict[site_num-1][comp_string] == 'iron'):
@@ -20,6 +36,9 @@ def sample(site_dict, comp_string, site_num):
         return(3)
 
 def travel(distance):
+    """
+    Calculates the time taken to travel an inputted distance at a speed of 10 km/hr.
+    """
     time = distance/ 10
     return(time)
 
