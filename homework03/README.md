@@ -3,5 +3,5 @@ This project is comprised of two scripts and analyzes a .json file, ```turbidity
 
 ## Downloading turbidity_data.json
 To download the ```turbidity_data.json``` data set to analyze, type the following command into the command line of your terminal:
-```wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json```.
+<p>```wget https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json```. </p>
 Or visit this [link](https://raw.githubusercontent.com/wjallen/turbidity/main/turbidity_data.json) and copy and paste the data into a .json file of your own.
