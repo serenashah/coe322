@@ -8,10 +8,10 @@ Or visit this [link](https://raw.githubusercontent.com/wjallen/turbidity/main/tu
 ## Scripts
 ### Analyzing the Water: analyze_water.py
 This program reads the turbidity data file and parses it. One function iterates through the data file list and calculates the turbidity, **T**, of the sample using information about its calibration constant, **a0**, and its detector current **I90**.   
-     > Turbidity model: T = a0 * I90
+> Turbidity model: T = a0 * I90
 
 The main function calculates the average of the five most recent turbidities, and this number is inputted into the second function which returns the time, **b**, to fall below a safe turbidity threshold, **Ts = 1.0 NTU**, considering variables of decay factor per hour, **d = 0.02**, and the inputted current turbidity, **T0 = T**.  
-    > Time model: Ts > T0(1-d)^b
+> Time model: Ts > T0(1-d)^b
 
 ### Testing the Analysis Script: test_analyze_water.py
 This program is a unit test script that verifies the performance of the functions in the program analyzing the water. Both functions each have various tests for their accuracy and for exceptions in the case of invalid inputs, with 5 assertions for each.
