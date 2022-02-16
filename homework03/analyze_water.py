@@ -6,7 +6,8 @@ def calc_turb(turb_list: list, a0_string: str, I90_string: str, item: int) -> fl
     a0 = turb_list[item][a0_string]
     I90 = turb_list[item][I90_string]
     T = a0 * I90
-    return(T)
+    if a0 >= 0 and I90 >=0:
+        return(T)
 
 def calc_time(T0: float) -> float:
     """
@@ -21,8 +22,12 @@ def calc_time(T0: float) -> float:
 
 def main():
     import json
+    import logging
+    
+    format_str = '%(levelname)s: %(message)s'
+    logging.basicConfig(level=logging.INFO, format = format_str)
 
-    with open('turb_data.json', 'r') as f:
+    with open('turbidity_data.json', 'r') as f:
         read_turb = json.load(f)
 
     total_turb = 0
@@ -38,9 +43,12 @@ def main():
     print("Average turbidity on the five most recent measurements:", total_turb/5, "NTU")
 
     if avg_turb >= 1:
-        print("Minimimum time required to return below a safe threshold =", time, "hrs")
+       logging.warning("Turbidity is above threshold for safe use")
+       print("Minimimum time required to return below a safe threshold =", time, "hrs")
     else:
+        logging.info("Turbidity is below threshold for safe use")
         print("Minimimum time required to return below a safe threshold =", 0, "hrs")
+
         
 
 if __name__ == '__main__':
