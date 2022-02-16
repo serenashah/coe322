@@ -42,7 +42,7 @@ def main():
     time = calc_time(avg_turb)
     print("Average turbidity on the five most recent measurements:", total_turb/5, "NTU")
 
-    if avg_turb >= 1:
+    if avg_turb > 1:
        logging.warning("Turbidity is above threshold for safe use")
        print("Minimimum time required to return below a safe threshold =", time, "hrs")
     else:
