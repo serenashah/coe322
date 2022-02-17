@@ -33,7 +33,7 @@ def main():
     total_turb = 0
     total_time = 0
 
-    for x in range(5):
+    for x in range (len(read_turb['turbidity_data'])-1, len(read_turb['turbidity_data'])-6, -1):
         current_turb = (calc_turb(read_turb['turbidity_data'], 'calibration_constant', 
                         'detector_current', x))
         total_turb = total_turb + current_turb
