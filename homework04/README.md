@@ -26,6 +26,6 @@ To pull the image from the Docker Hub repository run the following command in te
 docker pull serenashah/ml_data_analysis:hw04 
 ```
 Expected first line output: 
-```sh
+```bash
 hw04: Pulling from serenashah/ml_data_analysis
 ```   
