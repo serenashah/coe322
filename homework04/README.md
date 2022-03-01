@@ -45,5 +45,11 @@ Run the follow command in terminal to enter the container:
 ```sh
 [user@f5p ~]$ docker run --rm -it serenashah/ml_data_analysis:hw04 /bin/bash
 ```
-Once in the container, your user should change from your desktop username to a root user: ```sh [root@6bc7d8bd0d18 code]#
+Once in the container, your user should change from your desktop username to a root user, and you can find the three main scripts listed in the code repository. 
+```sh 
+[root@6bc7d8bd0d18 code]# ls /code
+```
+> Expected output: 
+```sh
+Meteorite_Landings.json  ml_data_analysis.py  test_ml_data_analysis.py
 ```
