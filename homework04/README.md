@@ -7,6 +7,7 @@ The project includes:
 - A Dockerfile to run the programs in a container with the required/recommended base image and dependencies
 
 ## Meteorite Landings Data Set: ```Meteorite_Landing.json```
+This comprehensive data set consists of unique features of various meteorite landings and is provided by The Meteoritical Society. Meteorite features used for analysis include class, longitude, latitude, and mass (g).
 
 ## Meteorite Landings Data Analysis Script: ```ml_data_analysis.py```
 
