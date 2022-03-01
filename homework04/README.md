@@ -23,5 +23,4 @@ created ml_data_analysis Docker container.
 To have a functioning image to run your scripts in, you can either pull an existing image from Docker Hub, or build your own image. 
 To pull the image from the Docker Hub repository run the following command in terminal:
 ```docker pull serenashah/ml_data_analysis:hw04 ```
-> Expected output: ```hw04: Pulling from serenashah/ml_data_analysis```   
-                   ```...```
+> Expected first line output: ```hw04: Pulling from serenashah/ml_data_analysis```   
