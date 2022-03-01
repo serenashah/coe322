@@ -6,4 +6,8 @@ The project includes:
 - A testing script for the analytical script: ```test_ml_data_analysis.py```
 - A Dockerfile to run the programs in a container with the required/recommended base image and dependencies
 
-## ```Meteorite_Landing.json``` Data Set
+## Meteorite Landings Data Set: ```Meteorite_Landing.json```
+
+## Meteorite Landings Data Analysis Script: ```ml_data_analysis.py```
+
+## Data Analysis Tester Script: ```test_ml_data_analysis.py```
