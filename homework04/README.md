@@ -21,11 +21,15 @@ To run these scripts in an environment that has the necessary and recommended de
 created ml_data_analysis Docker container.
 #### Pulling or Building an Image
 To have a functioning image to run your scripts in, you can either pull an existing image from Docker Hub, or build your own image. 
-To pull the image from the Docker Hub repository run the following command in terminal:  
+To pull the image from the Docker Hub repository, run the following command in terminal:  
 ```sh
-docker pull serenashah/ml_data_analysis:hw04 
+[user@f5p ~]$ docker pull serenashah/ml_data_analysis:hw04 
 ```
 > Expected first line output: 
 ```sh
 hw04: Pulling from serenashah/ml_data_analysis
 ```   
+To build your own image of the container, run the following command in terminal:
+```sh
+[user@f5p ~]$ docker build -t username/ml_data_analysis:1.0 .
+```
