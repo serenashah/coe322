@@ -1,5 +1,5 @@
 # Meteorite Landings Data Analaysis
-This project offers various analyses on unique features of a comprehensive meteorite landings data set provided by The Meteoritical Society. Meteorite features used for analysis include class, longitude, latitude, and mass (g).  
+This project offers various analyses on unique features of a comprehensive meteorite landings data set such as the data set's average mass of the meteors, the locations of the meteors, and the classes of the meteors. It provides a summary of useful information describing the collective set of meteors.
 The project includes:
 - An example data set: ```Meteorite_Landing.json```
 - A script that provides a summary of the analysis of the data set: ```ml_data_analysis.py```
@@ -82,8 +82,8 @@ In the case you would like to run the analysis script against a unique data set 
 ```sh
 [user@f5p ~]$ docker run --rm -it -v $PWD:/data serenashah/ml_data_analysis:hw04 /bin/bash
 ```
-This mounts the contents of your current directory to a directory in the container ```data``` in which you'll be able to access your unique data set.
-A data set at this [link](https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json) can be downloaded and tested in the container.
+This mounts the contents of your current directory to a directory in the container ```data``` in which you'll be able to access your unique data set. Run the code in the same fashion as in the previous section replacing ```Meteorite_Landings.json``` with the data set you have mounted.
+A data set at this [link](https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json) can be copied into a file of your own and tested in the container.
 #### Running the Containerized Test Suite
 To run ```test_ml_data_analysis.py``` and verify the performance of the functions in the ```ml_data_analysis script```, run the container using the instructions above, move to the code repository and run the following command in terminal (this dependency has been installed in the container):
 ```sh
@@ -95,3 +95,28 @@ To run ```test_ml_data_analysis.py``` and verify the performance of the function
 
 ================================================== 3 passed in 0.04s ===================================================
 ```
+## Expected Inputs
+Be sure that the data being used against the containerized code resembles that of ```Meteorite_Landings.json``` in that its structure resembles a dictionary of one key whose values is a list of dictionaries. Expected input may look as follows:
+```
+{
+  "meteorite_landings": [
+    {
+      "name": "Ruiz",
+      "id": "10001",
+      "recclass": "L5",
+      "mass (g)": "21",
+      "reclat": "50.775",
+      "reclong": "6.08333",
+      "GeoLocation": "(50.775, 6.08333)"
+    },
+     {
+      "name": "Beeler",
+      "id": "10002",
+      "recclass": "H6",
+      "mass (g)": "720",
+      "reclat": "56.18333",
+      "reclong": "10.23333",
+      "GeoLocation": "(56.18333, 10.23333)"
+    },
+```
+Additionally, be sure that the key strings for the mass, latitude, longitude, and class are respectively labeled as ```'mass (g)'```, ```'reclat'```, ```'reclong'```, and ```'recclass'```, so the code identifies the correct keys.
