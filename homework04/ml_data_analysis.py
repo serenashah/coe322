@@ -90,7 +90,7 @@ def main():
     logging.debug(f'the type of ml_data is {type(ml_data)}')
 
     print('Summary data following meteorite analysis: \n')
-    print('Average mass of 30 meteor(s):')
+    print('Average mass of',  len(ml_data['meteorite_landings']),'meteor(s):')
     print(compute_average_mass(ml_data['meteorite_landings'], 'mass (g)'),'\n')
 
     print('Hemisphere summary data:')
