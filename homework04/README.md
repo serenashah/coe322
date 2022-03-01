@@ -14,5 +14,5 @@ This comprehensive data set consists of unique features of various meteorite lan
 This script consists of many functions that offer particular information on the data collectively. Its output specifically offers information on the meteorites' average mass, number of meteorites per hemisphere, and number of respective class type.
 
 ### Data Analysis Tester Script: ```test_ml_data_analysis.py```
-This testing script tests the accuracy and the functionality of the functions of the analysis script, ```ml_data_analaysis.py```. Tests include key errors, value errors, type errors of the ```compute_average_mass```, ```check_hemisphere```, and ```count_class``` functions. To run the script in terminal, enter the following:
+This testing script tests the accuracy and the functionality of the functions of the analysis script, ```ml_data_analaysis.py```. Tests include key errors, value errors, type errors of the ```compute_average_mass```, ```check_hemisphere```, and ```count_class``` functions. To run the script in terminal, enter the following:  
 ```pytest test_ml_data_analysis.py```
