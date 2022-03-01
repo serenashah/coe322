@@ -47,9 +47,13 @@ Run the follow command in terminal to enter the container:
 ```
 Once in the container, your user should change from your desktop username to a root user, and you can find the three main scripts listed in the code repository. 
 ```sh 
-[root@6bc7d8bd0d18 code]# ls /code
+[root@6bc7d8bd0d18]# ls/code
 ```
 > Expected output: 
 ```sh
 Meteorite_Landings.json  ml_data_analysis.py  test_ml_data_analysis.py
+```
+To run the ```ml_data_analysis.py``` script with the provided ```Meteorite_Landings.json``` data set run the following in the ```code``` repository.
+```sh
+[root@6bc7d8bd0d18 code]# ./ml_data_analysis.py Meteorite_Landings.json
 ```
