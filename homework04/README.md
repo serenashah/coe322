@@ -28,13 +28,20 @@ To pull the image from the Docker Hub repository, run the following command in t
 > Expected first line output: 
 ```sh
 hw04: Pulling from serenashah/ml_data_analysis
+...
 ```   
 To build your own image of the container, run the following command in terminal:
 ```sh
 [user@f5p ~]$ docker build -t serenashah/ml_data_analysis:hw04 .
 ```
+> Expected first two lines output (should continue for 8 steps): 
+```sh
+Sending build context to Docker daemon  34.82kB
+Step 1/8 : FROM centos:7.9.2009
+...
+```  
 #### Running the code inside the Container
 Run the follow command in terminal to run the container:
 ```sh
-docker run --rm -it username/ml_data_analysis:hw04 /bin/bash
+[user@f5p ~]$ docker run --rm -it username/ml_data_analysis:hw04 /bin/bash
 ```
