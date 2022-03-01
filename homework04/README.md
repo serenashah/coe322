@@ -14,5 +14,12 @@ This comprehensive data set consists of unique features of various meteorite lan
 This script consists of many functions that offer particular information on the data collectively. Its output specifically offers information on the meteorites' average mass, number of meteorites per hemisphere, and number of respective class type.
 
 ### Data Analysis Tester Script: ```test_ml_data_analysis.py```
-This testing script tests the accuracy and the functionality of the functions of the analysis script, ```ml_data_analaysis.py```. Tests include key errors, value errors, type errors of the ```compute_average_mass```, ```check_hemisphere```, and ```count_class``` functions. To run the script in terminal, enter the following:  
-```pytest test_ml_data_analysis.py```
+This testing script tests the accuracy and the functionality of the functions of the analysis script, ```ml_data_analaysis.py```. Tests include key errors, value errors, type errors of the ```compute_average_mass```, ```check_hemisphere```, and ```count_class``` functions. 
+
+## Docker Usage
+To run these scripts in an environment that has the necessary and recommended dependencies, environment variables, base image, and install processes, run these scripts in the 
+created ml_data_analysis Docker container.
+#### Pulling or Building an Image
+To have a functioning image to run your scripts in, you can either pull an existing image from Docker Hub, or build your own image. 
+To pull the image from the Docker Hub repository run the following command in terminal:
+``` docker pull serenashah/ml_data_analysis:hw04 ```
