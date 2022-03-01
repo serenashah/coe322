@@ -90,11 +90,11 @@ To run ```test_ml_data_analysis.py``` and verify the performance of the function
 [root@6bc7d8bd0d18 code]# pytest test_ml_data_analysis.py
 ```
 > If the analysis script is functioning correctly, should output 3 passed tests:
-```sh
+```sh +
 ...                                                                                     [100%]
 
 ================================================== 3 passed in 0.04s ===================================================
-```
++```
 ## Expected Inputs
 Be sure that the data being used against the containerized code resembles that of ```Meteorite_Landings.json``` in that its structure resembles a dictionary of one key whose values is a list of dictionaries. Expected input may look as follows:
 ```
