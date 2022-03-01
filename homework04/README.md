@@ -80,8 +80,9 @@ The Acapulcoite class was found 1 times
 #### Running the Code inside the Container with Unique Data Set
 In the case you would like to run the analysis script against a unique data set besides the example data set provided in the container, you can mount your own data set into the container, byt first exiting the container with ```exit``` and then running the following command in the repository with your Dockerfile:
 ```sh
-[user@f5p ~]$ docker run --rm -it -v $PWD:/my_data serenashah/ml_data_analysis:hw04 /bin/bash
+[user@f5p ~]$ docker run --rm -it -v $PWD:/data serenashah/ml_data_analysis:hw04 /bin/bash
 ```
+This mounts the contents of your current directory to a directory in the container ```data``` in which you'll be able to access your unique data set.
 #### Running the Containerized Test Suite
 To run ```test_ml_data_analysis.py``` and verify the performance of the functions in the ```ml_data_analysis script```, run the container using the instructions above, move to the code repository and run the following command in terminal (this dependency has been installed in the container):
 ```sh
