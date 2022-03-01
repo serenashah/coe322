@@ -83,6 +83,7 @@ In the case you would like to run the analysis script against a unique data set 
 [user@f5p ~]$ docker run --rm -it -v $PWD:/data serenashah/ml_data_analysis:hw04 /bin/bash
 ```
 This mounts the contents of your current directory to a directory in the container ```data``` in which you'll be able to access your unique data set.
+A data set at this [link](https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json) can be downloaded and tested in the container.
 #### Running the Containerized Test Suite
 To run ```test_ml_data_analysis.py``` and verify the performance of the functions in the ```ml_data_analysis script```, run the container using the instructions above, move to the code repository and run the following command in terminal (this dependency has been installed in the container):
 ```sh
