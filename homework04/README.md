@@ -27,5 +27,5 @@ docker pull serenashah/ml_data_analysis:hw04
 ```
 Expected first line output: 
 ```sh
-echo"$" hw04: Pulling from serenashah/ml_data_analysis
+$ hw04: Pulling from serenashah/ml_data_analysis
 ```   
