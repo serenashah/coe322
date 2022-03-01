@@ -31,5 +31,10 @@ hw04: Pulling from serenashah/ml_data_analysis
 ```   
 To build your own image of the container, run the following command in terminal:
 ```sh
-[user@f5p ~]$ docker build -t username/ml_data_analysis:1.0 .
+[user@f5p ~]$ docker build -t serenashah/ml_data_analysis:hw04 .
+```
+#### Running the code inside the Container
+Run the follow command in terminal to run the container:
+```sh
+docker run --rm -it username/ml_data_analysis:hw04 /bin/bash
 ```
