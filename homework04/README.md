@@ -40,7 +40,7 @@ Sending build context to Docker daemon  34.82kB
 Step 1/8 : FROM centos:7.9.2009
 ...
 ```  
-#### Running the code inside the Container
+#### Running the Code Inside the Container with Example Data Set
 Run the follow command in terminal to enter the container:
 ```sh
 [user@f5p ~]$ docker run --rm -it serenashah/ml_data_analysis:hw04 /bin/bash
@@ -76,4 +76,16 @@ The H6 class was found 1 times
 The EH4 class was found 2 times
 The Acapulcoite class was found 1 times
 ...
+```
+#### Running the Code inside the Container with Unique Data Set
+#### Running the Containerized Test Suite
+To run ```test_ml_data_analysis.py``` and verify the performance of the functions in the ```ml_data_analysis script```, run the container using the instructions above, move to the code repository and run the following command in terminal (this dependency has been installed in the container):
+```sh
+[root@6bc7d8bd0d18 code]# pytest test_ml_data_analysis.py
+```
+> If functioning correctly, should output 3 passed tests:
+```sh
+...                                                                                     [100%]
+
+================================================== 3 passed in 0.04s ===================================================
 ```
