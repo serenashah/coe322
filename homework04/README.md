@@ -57,3 +57,23 @@ To run the ```ml_data_analysis.py``` script with the provided ```Meteorite_Landi
 ```sh
 [root@6bc7d8bd0d18 code]# ./ml_data_analysis.py Meteorite_Landings.json
 ```
+> The output should resemble a summary of the following information (numbers may be subject to change depending on version of data set):
+```sh 
+Summary data following meteorite analysis:
+
+Average mass of 30 meteor(s):
+83857.3
+
+Hemisphere summary data:
+There were 21 meteors found in the Northern & Eastern quadrant
+There were 0 meteors found in the Southern & Eastern quadrant
+There were 6 meteors found in the Northern & Western quadrant
+There were 3 meteors found in the Southern & Western quadrant
+
+ Class summary data:
+The L5 class was found 1 times
+The H6 class was found 1 times
+The EH4 class was found 2 times
+The Acapulcoite class was found 1 times
+...
+```
