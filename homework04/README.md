@@ -119,4 +119,4 @@ Be sure that the data being used against the containerized code resembles that o
       "GeoLocation": "(56.18333, 10.23333)"
     },
 ```
-Additionally, be sure that the key strings for the mass, latitude, longitude, and class are respectively labeled as ```'mass (g)'```, ```'reclat'```, ```'reclong'```, and ```'recclass'```, so the code identifies the correct keys.
+Additionally, be sure that the key strings for the mass, latitude, longitude, and class are respectively labeled as ```'mass (g)'```, ```'reclat'```, ```'reclong'```, and ```'recclass'```, these are the keys that the containerized code is set to identify for its functions.
