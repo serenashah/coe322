@@ -1,5 +1,5 @@
 # Meteorite Landings Data Analaysis
-This project offers various analyses on unique features of a comprehensive meteorite landings data set provided by The Meteoritical Society. Meteorite features used for analysis include class, longitude, latitude, and mass (g).  
+This project offers various analyses on unique features of a comprehensive meteorite landings data set such as the data set's average mass of the meteors, the locations of the meteors, and the classes of the meteors. It provides a summary of useful information describing the collective set of meteors.
 The project includes:
 - An example data set: ```Meteorite_Landing.json```
 - A script that provides a summary of the analysis of the data set: ```ml_data_analysis.py```
@@ -22,7 +22,7 @@ created ml_data_analysis Docker container.
 #### Pulling or Building an Image
 To have a functioning image to run your scripts in, you can either pull an existing image from Docker Hub, or build your own image. 
 To pull the image from the Docker Hub repository, run the following command in terminal:  
-```sh
+```bash
 [user@f5p ~]$ docker pull serenashah/ml_data_analysis:hw04 
 ```
 > Expected first line output: 
@@ -40,7 +40,7 @@ Sending build context to Docker daemon  34.82kB
 Step 1/8 : FROM centos:7.9.2009
 ...
 ```  
-#### Running the code inside the Container
+#### Running the Code Inside the Container with Example Data Set
 Run the follow command in terminal to enter the container:
 ```sh
 [user@f5p ~]$ docker run --rm -it serenashah/ml_data_analysis:hw04 /bin/bash
@@ -57,3 +57,66 @@ To run the ```ml_data_analysis.py``` script with the provided ```Meteorite_Landi
 ```sh
 [root@6bc7d8bd0d18 code]# ./ml_data_analysis.py Meteorite_Landings.json
 ```
+> The output should resemble a summary of the following information (numbers may be subject to change depending on version of data set):
+```bash 
+Summary data following meteorite analysis:
+
+Average mass of 30 meteor(s):
+83857.3
+
+Hemisphere summary data:
+There were 21 meteors found in the Northern & Eastern quadrant
+There were 0 meteors found in the Southern & Eastern quadrant
+There were 6 meteors found in the Northern & Western quadrant
+There were 3 meteors found in the Southern & Western quadrant
+
+ Class summary data:
+The L5 class was found 1 times
+The H6 class was found 1 times
+The EH4 class was found 2 times
+The Acapulcoite class was found 1 times
+...
+```
+#### Running the Code inside the Container with Unique Data Set
+In the case you would like to run the analysis script against a unique data set besides the example data set provided in the container, you can mount your own data set into the container, byt first exiting the container with ```exit``` and then running the following command in the repository with your Dockerfile:
+```sh
+[user@f5p ~]$ docker run --rm -it -v $PWD:/data serenashah/ml_data_analysis:hw04 /bin/bash
+```
+This mounts the contents of your current directory to a directory in the container ```data``` in which you'll be able to access your unique data set. Run the code in the same fashion as in the previous section replacing ```Meteorite_Landings.json``` with the data set you have mounted.
+A data set at this [link](https://raw.githubusercontent.com/wjallen/coe332-sample-data/main/ML_Data_Sample.json) can be copied into a file of your own and tested in the container.
+#### Running the Containerized Test Suite
+To run ```test_ml_data_analysis.py``` and verify the performance of the functions in the ```ml_data_analysis script```, run the container using the instructions above, move to the code repository and run the following command in terminal (this dependency has been installed in the container):
+```sh
+[root@6bc7d8bd0d18 code]# pytest test_ml_data_analysis.py
+```
+> If the analysis script is functioning correctly, should output 3 passed tests:
+```sh +
+...                                                                                     [100%]
+
+================================================== 3 passed in 0.04s ===================================================
+```
+## Expected Inputs
+Be sure that the data being used against the containerized code resembles that of ```Meteorite_Landings.json``` in that its structure resembles a dictionary of one key whose values is a list of dictionaries. Expected input may look as follows:
+```
+{
+  "meteorite_landings": [
+    {
+      "name": "Ruiz",
+      "id": "10001",
+      "recclass": "L5",
+      "mass (g)": "21",
+      "reclat": "50.775",
+      "reclong": "6.08333",
+      "GeoLocation": "(50.775, 6.08333)"
+    },
+     {
+      "name": "Beeler",
+      "id": "10002",
+      "recclass": "H6",
+      "mass (g)": "720",
+      "reclat": "56.18333",
+      "reclong": "10.23333",
+      "GeoLocation": "(56.18333, 10.23333)"
+    },
+```
+Additionally, be sure that the key strings for the mass, latitude, longitude, and class are respectively labeled as ```'mass (g)'```, ```'reclat'```, ```'reclong'```, and ```'recclass'```, these are the keys that the containerized code is set to identify for its functions.
