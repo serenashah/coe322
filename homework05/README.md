@@ -23,3 +23,15 @@ The Redis database can be launched with Docker using the following command.
 This runs the container in the background and mounts your local directory to the folder ```/data``` inside the container. It additionally configures the server to save 1 backup file every second.
 ## Running the Flask Container
 The Flask application is also containerized to provide access to the default Flask port from the host. 
+First pull the existing image for the Flask application with:
+```bash
+[user@f5p ~]$ docker pull serenashah/flask-redis:latest
+```
+You can then build the container with the following container, running it in the background:
+```bash
+docker build -t serenashah/flask-redis:latest .
+```
+Then run your container:
+```bash
+[user@f5p ~]$ docker run --name "<container_name>" -d -p 5028:5000 serenashah/flask-redis latest
+```
