@@ -35,7 +35,7 @@ Then run your container:
 ```bash
 [user@f5p ~]$ docker run --name "<container_name>" -d -p 5028:5000 serenashah/flask-redis:latest
 ```
-# Utilizing the Applicaition
+# Utilizing the Application
 The application contains two routes, both to the URL lcoation ```/data```.
 The first is a ```POST``` route that can be accessed with the HTTP client ```curl```. Load your meteorite landing data to the application with the following command:
 ```bash
