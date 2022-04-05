@@ -18,7 +18,7 @@ def download_data():
     '''
     global ml_data
 
-    with open('Meteorite_Landings.json', 'r') as f:
+    with open('ML_Data_sample.json', 'r') as f:
                ml_data = json.load(f)
     return "Data has been loaded.\n"
 
