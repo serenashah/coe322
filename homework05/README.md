@@ -15,7 +15,7 @@ First pull the existing official image for Redis version 6 with:
 ```
 The Redis database can be launched with Docker using the following command. 
 ```bash
-[user@f5p ~]$ docker run -p 6428:6379 --name=serena-redis redis:6
+[user@f5p ~]$ docker run -d -p 6428:6379 -v $(pwd)/data:/data:rw --name=serena-redis redis:6 --save 1 1
 1:C 31 Mar 2021 16:48:11.939 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 ...
 1:M 31 Mar 2021 16:48:11.972 * Ready to accept connections
@@ -29,7 +29,7 @@ First pull the existing image for the Flask application with:
 ```
 You can then build the container with the following container, running it in the background:
 ```bash
-docker build -t serenashah/flask-redis:latest .
+[user@f5p ~]$ docker build -t serenashah/flask-redis:latest .
 ```
 Then run your container:
 ```bash
