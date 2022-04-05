@@ -33,7 +33,7 @@ You can then build the container with the following container, running it in the
 ```
 Then run your container:
 ```bash
-[user@f5p ~]$ docker run --name "<container_name>" -d -p 5028:5000 serenashah/flask-redis latest
+[user@f5p ~]$ docker run --name "<container_name>" -d -p 5028:5000 serenashah/flask-redis:latest
 ```
 # Utilizing the Applicaition
 The application contains two routes, both to the URL lcoation ```/data```.
