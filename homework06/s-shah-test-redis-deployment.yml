@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s-shah-app-deployment
+  labels:
+    username: s-shah
+    env: test
+    app: s-shah-test-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s-shah-test-redis
+  template:
+    metadata:
+      labels:
+        app: s-shah-test-redis
+    spec:
+      containers:
+        - name: s-shah-test-redis
+          image: redis:6
+          ports:
+          - name: http
+            containerPort: 6379	  
+          volumeMounts:	 
+            - name: s-shah-data
+              mountPath: "/data"
+      volumes:
+      - name: s-shah-data
+        persistentVolumeClaim:
+          claimName: s-shah-data
