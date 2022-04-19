@@ -40,5 +40,34 @@ You're now in the pod. You can access the Flask API with the service's unique IP
 ``` bash
 root@py-debug-deployment-5dfcf7bdd9-pfrdv:/# curl -X POST 10.97.210.193:5000/data
 Data has been loaded!
+root@py-debug-deployment-5dfcf7bdd9-pfrdv:/# curl 10.97.210.193:5000/data
+[
+ {
+  "name": "Gerald",
+  "id": "10001",
+  "recclass": "H4",
+  "mass (g)": "5754",
+  "reclat": "-75.6691",
+  "reclong": "60.6936",
+  "GeoLocation": "(-75.6691, 60.6936)"
+ },
+ {
+  "name": "Dominique",
+  "id": "10002",
+  "recclass": "L6",
+  "mass (g)": "1701",
+  "reclat": "-9.4378",
+  "reclong": "49.5751",
+  "GeoLocation": "(-9.4378, 49.5751)"
+ },
+ {
+  "name": "Malinda",
+  "id": "10003",
+  "recclass": "CI1",
+  "mass (g)": "3482",
+  "reclat": "35.3692",
+  "reclong": "61.4206",
+  "GeoLocation": "(35.3692, 61.4206)"
+ },
 ```
 You are now free to load retrieve your data!
