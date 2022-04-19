@@ -9,5 +9,5 @@ spec:
     app: s-shah-test-redis
   ports:
   - name: s-shah-test-redis
-    port: 6428		
+    port: 6379
     targetPort: 6379

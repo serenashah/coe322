@@ -20,7 +20,7 @@ def download_data():
     with open('ML_Data_Sample.json', 'r') as f:
                ml_data = json.load(f)
     global rd
-    rd = redis.Redis(host='172.17.0.13', port = 6379, db = 0)
+    rd = redis.Redis(host='10.98.212.79', port = 6379, db = 0)
     for d in ml_data['meteorite_landings']:
             rd.set(d['id'],json.dumps(d))
 
