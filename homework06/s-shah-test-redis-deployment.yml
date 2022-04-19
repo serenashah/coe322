@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s-shah-app-deployment
+  name: s-shah-redis-deployment
   labels:
     username: s-shah
     env: test
