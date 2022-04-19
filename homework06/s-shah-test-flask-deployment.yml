@@ -2,26 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: s-shah-app-deployment
+  name: s-shah-flask-deployment
   labels:
     username: s-shah
     env: test
-    app: s-shah-test-redis
+    app: s-shah-test-flask
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: s-shah-test-flask
-   template:
-     metadata:
-       labels:
-         app: s-shah-test-flask
-	 username: s-shah
-	 env: test
+  template:
+    metadata:
+      labels:
+        app: s-shah-test-flask
     spec:
       containers:
         - name: s-shah-test-flask
-	  imagePullPolicy: Always
           image: serenashah/k8s-redis-flask:latest
           command: ['python3', 'core.py', ip_address]
           ports:
