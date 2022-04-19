@@ -9,5 +9,5 @@ spec:
     app: s-shah-test-flask
   ports:
   - name: s-shah-test-flask
-    port: 5028
+    port: 5000
     targetPort: 5000

@@ -19,7 +19,8 @@ spec:
     spec:
       containers:
         - name: s-shah-test-flask
-          image: serenashah/k8s-redis-flask:latest
+          imagePullPolicy: Always
+          image: serenashah/k8s-flask-redis:latest
           command: ['python3', 'core.py', ip_address]
           ports:
           - name: http
