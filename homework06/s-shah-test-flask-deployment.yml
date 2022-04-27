@@ -8,7 +8,7 @@ metadata:
     env: test
     app: s-shah-test-flask
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: s-shah-test-flask
@@ -21,7 +21,7 @@ spec:
         - name: s-shah-test-flask
           imagePullPolicy: Always
           image: serenashah/k8s-flask-redis:latest
-          command: ['python3', 'core.py', ip_address]
+          command: ['python3', 'app.py']
           ports:
           - name: http
             containerPort: 5000
