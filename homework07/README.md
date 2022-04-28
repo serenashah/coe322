@@ -3,7 +3,7 @@ The ISS Data Querier application provides this functionality as a containerized 
 
 ## Diagram Explication
 The following diagram visually models the functionality of the ISS Data Querier project, detailing user actions required to retrieve specific information about the International Space Station:
-![Diagram](COE332_midterm_diagram.jgp)
+![Diagram](COE332_midterm_diagram.jpg)
 
 The user must first create a running container of the Flask web server hosting the application. This has been made simple with the ```make all``` command, which creates all targets listed in the Makefile, creating an environment with all necessary dependencies and variables to run the application.
 
