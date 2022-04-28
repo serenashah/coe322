@@ -10,7 +10,7 @@ From there the user loads the datasets (that should be downloaded to their repos
 
 To retrieve any sort of information, the user must use the HTTP ```GET``` verb, which doesn't require being explicitly typed. Two types of data can be accessed (either the positional data or the sighting data), and these can be accessed through either the ```epoch``` routes or ```countries``` routes, respectively. The "Specific <Epoch/Country/City/Region> Data" blocks are routes with detailed information on all the sightings of the specified area. The route blocks with titles (i.e. "Epochs", "Countries", etc.) return lists of the respective regions with sightings.
 
-The labels on the arrows indicate actions for the users to take when utilizing the application.
+The labels on the arrows indicate actions for the users to take when utilizing the application. Red blocks indicate HTTP commands, and all blocks within the "Positional Data Routes" and "Sighting Data Routes" borders indicate application functionalities that are called through specific routes.
 
 ## Project Access
 Further detail about the project's implementation can be found at this [GitHub repository](https://github.com/serenashah/iss-tracking.git), including informatioin about:
